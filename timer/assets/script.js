@@ -4,6 +4,9 @@
 
 
 const form = document.querySelector("#formulario");
+const botaoParar = document.querySelector("#botaoPausar")
+const botaoZerar = document.querySelector("#botaoZerar")
+
 
 form.addEventListener('submit', (evento)=>{
     evento.preventDefault();
@@ -40,9 +43,22 @@ const timer = (duracao,display)=>{
         timer -= 1
 
         if(timer < 0){
-            display.innerHTML = 'acabou'
             clearInterval(interval)
         }
+        
+        if(timer > 0){
+            botaoParar.addEventListener('click', (e)=>{
+                e.preventDefault()
+                clearInterval(interval)
+            })
+
+            botaoZerar.addEventListener('click', (e)=>{
+                e.preventDefault()
+                clearInterval(interval)
+                display.innerHTML = "00 : 00 : 00"
+            })
+        }
+
     },1000)
 }
 

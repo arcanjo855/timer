@@ -13,28 +13,34 @@
         <h1>Timer</h1>
 
         <form action="" id="formulario">
-            <div>
-                <label for="input-horas">horas</label>
-                <input type="number" id="input-horas" name="horas" value="00" max="99" min="00">
+            <div class="inputs">
+                <div>
+                    <label for="input-horas">horas</label>
+                    <input type="number" id="input-horas" name="horas" value="00" max="99" min="00">
+                </div>
+                
+                <div>
+                    <label for="input-minutos">minutos</label>
+                    <input type="number" id="input-minutos" name="minutos" value="00" max="59" min="00">
+                </div>
+                
+                <div>
+                    <label for="input-segundos">segundos</label>
+                    <input type="number" id="input-segundos" name="segundos" value="00" max="59" min="00">
+                </div>
+            </div>
+            <div class="botoes">
+                <button type="submit">iniciar</button>
+                <button id="botaoPausar">pausar</button>
+                <button id="botaoZerar">zerar</button>
             </div>
             
-            <div>
-                <label for="input-minutos">minutos</label>
-                <input type="number" id="input-minutos" name="minutos" value="00" max="59" min="00">
-            </div>
-            
-            <div>
-                <label for="input-segundos">segundos</label>
-                <input type="number" id="input-segundos" name="segundos" value="00" max="59" min="00">
-            </div>
-            
-
-            <button type="submit">iniciar</button>
 
 
         </form>
+
         </section>
-        <div id="contagem">00:00:00</div>
+        <div id="contagem">00 : 00 : 00</div>
     
                 
     
